@@ -1,0 +1,10 @@
+$hamburger-layer-color: var(--primary-color);
+$hamburger-types: (spin);
+
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+.hamburger {
+    display: none;
+    @media screen and (max-width:850px){
+        display: block;
+    }
+}

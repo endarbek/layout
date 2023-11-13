@@ -1,0 +1,75 @@
+.yourpets {
+    display: flex;
+    justify-content: space-between;
+    background: #D9E4E2;
+    padding: 44px 94px;
+    border-radius: 50px;
+    @media screen and (max-width:850px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 5px;
+    }
+}
+.ofpets-p {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+    color: var(--parap-color);
+    max-width: 517px;
+    margin: 0;
+    @media screen and (max-width:550px){
+        text-align: center;
+    }
+}
+.ofpets__h1 {
+    max-width: 283px;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: var(--dark-color);
+    @media screen and (max-width:550px){
+        text-align: center;
+        font-size: 38px;
+    }
+}
+.ofpets {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    @media screen and (max-width:550px){
+        align-items: center;
+        justify-content: center;
+    }
+}
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.scales {
+    color: var(--link-color);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+}
+.dog-big {
+    max-width: 279px;
+    border-radius: 200px;
+    @media screen and (max-width:550px){
+        border-radius: 50px;
+        max-width: 100%;
+    }
+}
+.chek {
+    transform:scale(1.8);
+    opacity:0.9;
+    cursor:pointer;
+}
+.checkbox {
+    display: flex;
+    gap: 16px;
+}

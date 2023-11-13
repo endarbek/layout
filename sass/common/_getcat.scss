@@ -1,0 +1,48 @@
+.get{
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    margin-bottom: 50px;
+}
+.getting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width:950px){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.longstrip {
+    max-width: 1080px;
+    height: 1px;
+    background: #FEE4DF;
+}
+.description {
+    text-align: center;
+    max-width: 525px;
+}
+.description__h5 {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--parap-color);
+    font-family: Poppins;
+    max-width: 520px;
+    text-align: center;
+    margin: 0;
+}
+.description__h3 {
+    font-weight: 600;
+    font-family: Poppins;
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+}
+.photologo {
+    display: flex;
+}
+.imgdog{
+    transform: translateX(-50px);
+}

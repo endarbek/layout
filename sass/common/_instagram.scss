@@ -1,0 +1,26 @@
+.follow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+    @media screen and (max-width:850px){
+        grid-template-columns: repeat( 1fr);
+    }
+}
+.follows__img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+}
+.instagram__h1 {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+.instagram__span{
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
