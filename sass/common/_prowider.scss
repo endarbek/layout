@@ -85,3 +85,9 @@
 .visit__h3-2,.visit__p-2 {
     color: var(--light-color);
 }
+.prowider__h1-article {
+    margin-top: 195px;
+    @media screen and (max-width:550px){
+        margin-top: 45px;
+    }
+}

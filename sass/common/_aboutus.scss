@@ -64,12 +64,55 @@
         max-width: 100%;
     }
 }
-.chek {
-    transform:scale(1.8);
-    opacity:0.9;
-    cursor:pointer;
-}
+// .chek {
+//     transform:scale(1.8);
+//     opacity:0.9;
+//     cursor:pointer;
+// }
+// .checkbox {
+//     display: flex;
+//     gap: 16px;
+// }
 .checkbox {
+    position: relative;
+}
+label {
     display: flex;
-    gap: 16px;
+    align-items: center;
+    gap:14px;
+}
+
+.checkbox__input {
+    -webcit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.custom-check {
+    display: inline-flex;
+    width: 23px;
+    height: 23px;
+    border: 2px solid black;
+    background: white;
+    border-radius: 5px;
+
+    transition: background .1s linear,border .1s linear;
+}
+.custom-check::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    /* background: url(../img/bx-check.svg) no-repeat; */
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+.checkbox__input:checked + .custom-check{
+    background: #42766C;
+    border: 2px solid #42766C;
+}
+.checkbox__input:checked + .custom-check::after {
+    opacity: 1;
 }
