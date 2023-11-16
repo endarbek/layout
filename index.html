@@ -42,12 +42,71 @@
             <span class="logo__link"> PetShop </span>
           </div>
           <nav class="nav">
-            <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link">About</a>
-            <a href="#" class="nav__link">Services</a>
-            <a href="#" class="nav__link">Pages</a>
-            <a href="#" class="nav__link">Cart</a>
-            <button class="btn conct-btn">Contact Us</button>
+            <ul class="nav__ul">
+              <li class="nav__li">
+                <a href="#" class="nav__link">Home</a>
+              </li>
+              <li class="nav__li">
+                <a href="#" class="nav__link">About</a>
+              </li>
+              <li class="nav__li nav__link-link">
+                <a href="#" class="nav__link dropdown-link"
+                  >Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: var(--link-color); transform: ; msfilter: "
+                  >
+                    <path
+                      d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                    ></path>
+                  </svg>
+                </a>
+                <ul class="nav__li-ul">
+                  <li class="nav__li-ul__li">
+                    <a href="#" class="nav__link nav__linkhover">Connection</a>
+                  </li>
+                  <li class="nav__li-ul__li">
+                    <a href="#" class="nav__link nav__linkhover">Office</a>
+                  </li>
+                  <li class="nav__li-ul__li">
+                    <a href="#" class="nav__link nav__linkhover">Relation</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__li nav__link-link">
+                <a href="#" class="nav__link dropdown-link"
+                  >Pages
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: var(--link-color); transform: ; msfilter: "
+                  >
+                    <path
+                      d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                    ></path>
+                  </svg>
+                </a>
+                <ul class="nav__li-ul">
+                  <li class="nav__li-ul__li">
+                    <a href="#" class="nav__link nav__linkhover">Sheet</a>
+                  </li>
+                  <li class="nav__li-ul__li">
+                    <a href="#" class="nav__link nav__linkhover">Homepage</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__li">
+                <a href="#" class="nav__link">Cart</a>
+              </li>
+              <li class="nav__li">
+                <button class="btn conct-btn">Contact Us</button>
+              </li>
+            </ul>
           </nav>
           <button class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
@@ -448,12 +507,34 @@
       // Look for .hamburger
       var hamburger = document.querySelector(".hamburger");
       var nav = document.querySelector(".nav");
+      const dropdownList = document.querySelectorAll(".nav__li-ul");
       // On click
       hamburger.addEventListener("click", function () {
         // Toggle class "is-active"
         hamburger.classList.toggle("is-active");
         nav.classList.toggle("is-active");
         // Do something else, like open/close menu
+      });
+
+      document.querySelectorAll(".dropdown-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const currentList = this.nextElementSibling;
+          currentList.classList.toggle("expanded");
+        });
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("dropdown-link")) {
+          e.preventDefault();
+        } else {
+          dropdownList.forEach((dropItem) => {
+            if (dropItem.classList.contains("expanded")) {
+              dropItem.classList.remove("expanded");
+              console.log("remove");
+            }
+          });
+        }
       });
     </script>
   </body>
