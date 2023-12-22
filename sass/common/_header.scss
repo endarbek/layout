@@ -102,4 +102,15 @@
     font-weight: 700;
 }
 
-
+.header{
+    @media screen and (max-width:850px){
+        z-index: 1;
+        background: #fff;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 5px black;
+        .navbar{
+            padding: 5px 0;
+        }
+    }
+}
